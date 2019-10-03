@@ -1,0 +1,41 @@
+.dash-container{
+  color: rgba(0, 0, 0, 0.856);
+  background-color: rgb(9, 61, 172);
+  font-family: lato;
+}
+.jumbotron{
+  background-color: rgb(21, 77, 197);
+  color: #fff;
+  font-size: 1.75em;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h1{
+    font-weight: 700;
+    font-family: lato;
+      font-size: 2em;
+    }
+    &:after{
+      background-image: image("../../assets/zarowka.svg")
+    }
+  }
+
+.dash-title{
+  margin: auto;
+}
+
+.services{
+  padding: 50px;
+}
+
+button{
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: rgb(54, 134, 172);
+  color: black;
+  font-weight: 700;
+
+  a{
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,19 @@
+.row{
+  font-weight: 700;
+  a{
+    color: rgb(211, 229, 255);
+    &:hover{
+      color: #ffff;
+    }
+    &:active{
+      color: rgb(9, 93, 172)
+    }
+  }
+}
+.nav-item{
+  // padding:2px;
+  margin-left: 7px;
+}
+.background-c{
+  background-color: rgb(9, 61, 172);
+}

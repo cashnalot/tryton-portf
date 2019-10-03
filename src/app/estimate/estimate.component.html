@@ -1,0 +1,54 @@
+<div class="container-fluid vh-100">
+    <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="container">
+              <h3> Bezpłatna wycena projektu </h3>
+              <p class="lead">Proszę podaj nam jakieś szczegóły na temat projektu</p>
+            </div>
+          </div>
+          <div class="row">
+            <form [formGroup]="contactForm">
+              <label for="name">Imię i Nazwisko:</label>
+              <input type="text" id="name" formControlName="name">
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" formControlName="email">
+              <div *ngIf="contactForm.get('email').invalid && contactForm.get('email').dirty">Pole wymagane!</div>
+              <div *ngIf="contactForm.get('email').errors && contactForm.get('email').errors['email'] && contactForm.get('email').dirty">Zły adres e-mail</div>
+
+              <label for="phoneNumber">Numer telefonu:</label>
+              <input type="text" id="phoneNumber" formControlName="phoneNumber">
+
+              <label for="companyName">Nazwa firmy:</label>
+              <input type="text" id="companyName" formControlName="companyName">
+
+              <label for="description">Opis projektu:</label>
+              <input type="text" id="description" formControlName="description">
+
+              <label for="platforms">Wybierz platformę na której będzie znajdowała się Twoja aplikacja.</label>
+              <select formControlName="platforms" id="platforms">
+                <option *ngFor="let platform of platforms" [value]="platforms" > {{platform}} </option>
+              </select>
+
+              <div>
+                <label for="platforms">Wybierz platformę na której będzie znajdowała się Twoja aplikacja.</label>
+                <input type="radio" id="platforms" [value]="platforms" formControlName="platforms">
+              </div>
+
+              <label for="assets">Co możesz nam zapewnić[?]</label>
+              <select formControlName="assets" id="assets">
+                <option *ngFor="let asset of assets" [value]="assets" > {{asset}} </option>
+              </select>
+
+              <label for="budgets">Twój budżet?</label>
+              <select formControlName="budgets" id="budgets">
+                <option *ngFor="let budget of budgets" [value]="budgets" > {{budget}} </option>
+              </select>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+</div>
